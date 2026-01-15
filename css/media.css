@@ -24,4 +24,124 @@
   header .mobile-btn {
     display: block;
   }
+
+  header .mobile-menus {
+    display: block;
+    position: absolute;
+    top: 101%;
+    width: var(--ls-full);
+    background: #fff;
+    box-shadow: 0 1px 3px var(--color-gray-d);
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+
+  header .mobile-menus .nav-lists {
+    display: block;
+  }
+
+  header .mobile-menus .nav-lists li {
+    text-align: center;
+    padding: 0;
+  }
+
+  header .mobile-menus .nav-lists li a,
+  .info li a {
+    display: block;
+    width: var(--ls-full);
+    font-size: var(--fs-16);
+    padding: var(--el-medium) 0;
+    border-bottom: 1px solid var(--color-gray-d);
+  }
+
+  header .mobile-menus .info {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Landing Section Styles */
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.4;
+  }
+
+  #main-section .landing-text-box h1 {
+    text-shadow: 1px 1px 1px var(--color-gray-2);
+  }
+
+  #main-section .landing-text-box p {
+    width: var(--ls-1-2);
+  }
+}
+
+@media screen and (max-width: 786px) {
+  html {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: var(--el-section-small);
+  }
+
+  .container {
+    padding: 0 var(--el-medium);
+  }
+
+  /* Meet Section Styles */
+  .meet-section .meet-wrapper {
+    flex-direction: column;
+    row-gap: var(--el-wide);
+  }
+
+  .meet-section .meet-text-box,
+  .meet-section .meet-text-box p,
+  .meet-section .meet-image-box {
+    width: var(--ls-full);
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .section {
+    padding: var(--el-section-mobile);
+  }
+
+  #main-section .landing-text-box {
+    text-align: center;
+  }
+
+  #main-section .landing-text-box h1 {
+    font-size: 1.8rem;
+  }
+
+  #main-section .landing-text-box p {
+    width: 80%;
+    margin: auto;
+  }
+
+  .overlay {
+    opacity: 0.7;
+  }
+
+  /* Meet Section Styles */
+
+  .meet-section .meet-text-box p {
+    width: var(--ls-full);
+    font-size: var(--fs-16);
+  }
+
+  .meet-section .meet-image-box {
+    column-gap: var(--el-normal);
+  }
+
+  .meet-section .meet-text-box span {
+    font-size: var(--fs-16);
+  }
+
+  .meet-section .meet-left-image {
+    row-gap: var(--el-normal);
+  }
 }

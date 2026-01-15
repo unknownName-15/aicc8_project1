@@ -15,7 +15,7 @@ sr.reveal('.meet-text-box', {
   distance: '40px',
 });
 
-sr.reveal('.meet-wrapper img', {
+sr.reveal('.meet-wrapper img, .feature', {
   duration: 1000,
   origin: 'bottom',
   distance: '40px',

@@ -114,3 +114,28 @@
 .meet-section .meet-image-box img:nth-child(2) {
   width: 80%;
 }
+
+/* Features Section Styles */
+.feature-section .features {
+  width: var(--ls-full);
+  display: flex;
+  justify-content: space-around;
+}
+
+.feature-section .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--el-wide);
+}
+
+.feature-section .feature h4 {
+  font-size: var(--fs-name);
+  font-weight: var(--fw-400);
+  padding: var(--el-medium) 0;
+}
+
+.feature-section .feature p {
+  font-size: var(--fs-small-text);
+  text-align: center;
+}

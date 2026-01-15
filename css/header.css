@@ -230,3 +230,7 @@ header .mobile-btn span.bar-line:nth-child(2) {
     transform: rotate(0);
   }
 }
+
+.mobile-menus {
+  display: none;
+}

@@ -20,4 +20,8 @@
   header .logo {
     justify-content: flex-start;
   }
+
+  header .mobile-btn {
+    display: block;
+  }
 }

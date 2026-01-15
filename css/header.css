@@ -113,6 +113,7 @@ header li.user a {
 header .mobile-btn {
   width: 1.8rem;
   cursor: pointer;
+  display: none;
 }
 
 header .mobile-btn-wrapper {
@@ -131,4 +132,101 @@ header .mobile-btn span.bar-line {
 
 header .mobile-btn span.bar-line:nth-child(2) {
   margin: 5px 0;
+}
+
+.mobile-btn.active span.bar-line:nth-child(1) {
+  animation: ease 0.5s top forwards;
+}
+.mobile-btn.active span.bar-line:nth-child(2) {
+  animation: ease 0.5s scaled forwards;
+}
+.mobile-btn.active span.bar-line:nth-child(3) {
+  animation: ease 0.5s bottom forwards;
+}
+
+.mobile-btn.not-active span.bar-line:nth-child(1) {
+  animation: ease 0.5s top-back forwards;
+}
+.mobile-btn.not-active span.bar-line:nth-child(2) {
+  animation: ease 0.5s scaled-back forwards;
+}
+.mobile-btn.not-active span.bar-line:nth-child(3) {
+  animation: ease 0.5s bottom-back forwards;
+}
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 10px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 10px;
+    transform: rotate(40deg);
+  }
+}
+@keyframes scaled {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes bottom {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 10px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 5px;
+    transform: rotate(140deg);
+  }
+}
+
+@keyframes top-back {
+  0% {
+    top: 10px;
+    transform: rotate(40deg);
+  }
+  50% {
+    top: 10px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0);
+  }
+}
+@keyframes scaled-back {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bottom-back {
+  0% {
+    bottom: 5px;
+    transform: rotate(140deg);
+  }
+  50% {
+    bottom: 10px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
 }

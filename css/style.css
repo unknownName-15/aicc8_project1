@@ -1,0 +1,146 @@
+/* Header Styles */
+.header-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  position: fixed;
+  width: var(--ls-full);
+  height: auto;
+  padding: 1.75rem 0;
+  z-index: 15;
+}
+
+header.active {
+  background: #fff;
+  border-bottom: 1px solid var(--color-gray-d);
+}
+
+header .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  align-items: center;
+}
+
+header .container > * {
+  display: flex;
+}
+
+header .nav-lists {
+  display: flex;
+}
+
+header .nav-lists li {
+  padding: 0 2rem 0 0;
+}
+
+header .nav-lists li a {
+  font-size: var(--fs-14);
+}
+
+header .nav-lists li a:hover {
+  text-decoration: underline;
+}
+
+header .logo {
+  justify-content: center;
+}
+
+header .logo a {
+  width: 100px;
+}
+
+header .logo img {
+  width: 100%;
+}
+
+header .info {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .info li {
+  padding: 0 0 0 1rem;
+  display: flex;
+}
+
+header .info li a {
+  font-size: var(--fs-14);
+}
+
+header .info li.sns ul {
+  display: flex;
+}
+
+header .info li.sns li a {
+  width: 20px;
+}
+
+header .info li.sns li a img {
+  width: 100%;
+}
+
+header li.cart a {
+  display: flex;
+  align-items: center;
+  background: var(--color-black);
+  color: #fff;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  height: 1.8rem;
+}
+
+header li.cart a em {
+  font-style: normal;
+}
+
+header li.user {
+  padding-left: 0.25rem;
+}
+
+header li.user a {
+  background-color: transparent;
+  border: 1px solid var(--color-black);
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  height: 1.8rem;
+  font-size: var(--fs-14);
+  display: flex;
+  align-items: center;
+}
+
+/* Landing Section Styles */
+#main-section {
+  padding: 0;
+  width: var(--ls-full);
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-section img {
+  width: var(--ls-full);
+  height: var(--ls-full);
+  min-width: 1280px;
+  position: absolute;
+  object-fit: cover;
+}
+
+#main-section .landing-text-box {
+  z-index: 10;
+}
+
+#main-section .landing-text-box h1 {
+  font-size: var(--fs-title);
+  line-height: 1.4;
+  font-weight: var(--fw-400);
+}
+
+#main-section .landing-text-box p {
+  padding: var(--el-medium) 0;
+  width: var(--ls-1-3);
+}

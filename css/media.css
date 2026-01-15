@@ -1,0 +1,23 @@
+@media screen and (max-width: 980px) {
+  .common-button {
+    font-size: var(--fs-12);
+  }
+
+  /* Header Styles */
+  header {
+    background: #fff;
+    border-bottom: 1px solid var(--color-gray-d);
+  }
+
+  header .container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header .container > *:not(.logo, .mobile-btn-wrapper) {
+    display: none;
+  }
+
+  header .logo {
+    justify-content: flex-start;
+  }
+}

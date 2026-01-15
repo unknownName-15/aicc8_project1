@@ -21,3 +21,16 @@ sr.reveal('.landing-text-box', {
   origin: 'right',
   distance: '80px',
 });
+
+sr.reveal('.meet-text-box', {
+  duration: 1000,
+  origin: 'bottom',
+  distance: '40px',
+});
+
+sr.reveal('.meet-wrapper img', {
+  duration: 1000,
+  origin: 'bottom',
+  distance: '40px',
+  interval: 200, // 0.2초 간격으로 차례대로 효과 나타남
+});

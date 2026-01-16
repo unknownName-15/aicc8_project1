@@ -139,3 +139,146 @@
   font-size: var(--fs-small-text);
   text-align: center;
 }
+
+/* Slider Section Styles */
+.silder-section .container {
+  position: relative;
+}
+
+.silder-section .swiper-slide {
+  display: flex;
+  width: var(--ls-full);
+}
+
+.silder-section .swiper-slide > div {
+  width: var(--ls-1-2);
+  height: 320px;
+  padding: 0 var(--el-medium);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.silder-section .swiper-slide > div > img {
+  width: var(--ls-full);
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+}
+
+.silder-section .silder-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: var(--el-medium);
+}
+
+.silder-section .swiper-slide.swiper-slide-active .silder-text {
+  animation: show-up 0.5s 1;
+  transform: translateY(40px);
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes show-up {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.silder-section .silder-text h4 {
+  font-size: 1.8rem;
+  font-weight: var(--fw-400);
+}
+
+.silder-section .silder-text p {
+  font-size: var(--fs-small-text);
+  width: 90%;
+}
+
+.silder-section .slider-nav {
+  background: #fff;
+  color: var(--color-black);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px var(--color-gray-3);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  svg {
+    height: 50%;
+    width: 50%;
+  }
+}
+
+.swiper-button-next {
+  right: 1.5rem !important;
+}
+
+.swiper-button-prev {
+  left: 1.5rem !important;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -2.5rem;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000;
+}
+
+/* Offers Section Style */
+.offers-section .products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.offers-section .product-frame {
+  width: var(--ls-1-3);
+  padding: var(--el-medium);
+}
+
+.offers-section .product-frame img {
+  width: var(--ls-full);
+  border-radius: 0.25rem;
+}
+
+.offers-section .product-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--el-normal);
+  margin-top: var(--el-normal);
+}
+
+.offers-section .product-text h4 {
+  font-size: var(--fs-name);
+  font-weight: var(--fw-400);
+}
+
+.offers-section .product-text strong {
+  font-size: var(--fs-18);
+}
+
+.offers-section .product-text p {
+  padding: var(--el-medium);
+  font-size: var(--fs-small-text);
+}

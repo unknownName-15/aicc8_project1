@@ -9,49 +9,56 @@ async function getRequest(url) {
   });
 }
 
+function createSliderTeplate(item) {
+  const { pro_img, pro_name, pro_desc } = item;
+  return `
+      <div class="swiper-slide">
+      <div class="slider-image">
+        <img src="images/${pro_img}" alt="slider image">
+      </div>
+      <div class="slider-text">
+        <h4>${pro_name}</h4>
+        <p>${pro_desc}</p>
+        <a href="#" class="common-button">자세히 보기</a>
+      </div>
+    </div>
+  `;
+}
+function createOfferTeplate(item) {
+  const { pro_img, pro_name, pro_desc, pro_price } = item;
+  return `
+      <div class="product-frame">
+      <div class="product-item">
+        <div class="product-img">
+          <img src="images/${pro_img}" alt="item image">
+        </div>
+        <div class="product-text">
+          <h4>${pro_name}</h4>
+          <strong>${pro_price}원</strong>
+          <p>${pro_desc}</p>
+          <a href="#" class="common-button">자세히 보기</a>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 // Get Products Function
 const silderWrapper = document.querySelector('.swiper-wrapper');
 const offersWrapper = document.querySelector('.products');
-// const sliderDOM = `
-//       <div class="swiper-slide">
-//         <div class="silder-image">
-//           <img src="images/${pro_img}" alt="slider image" />
-//         </div>
-//         <div class="silder-text">
-//           <h4>${pro_name}</h4>
-//           <p>${pro_desc}</p>
-//           <a href="#" class="common-button">자세히 보기</a>
-//         </div>
-//       </div>
-//     `;
 
-async function getProducts(n, wrapper) {
+async function getProducts(n, wrapper, template) {
   const getProductsUrl = `https://www.dabipyeung.com/soaply_backend/model/get_products.php?qnt=${n}`;
 
   try {
     //요청 시도
     const data = await getRequest(getProductsUrl);
-    let dataElement = '';
-
-    data.map((item) => {
-      const { pro_img, pro_name, pro_desc } = item;
-      dataElement += `
-      <div class="swiper-slide">
-        <div class="silder-image">
-          <img src="images/${pro_img}" alt="slider image" />
-        </div>
-        <div class="silder-text">
-          <h4>${pro_name}</h4>
-          <p>${pro_desc}</p>
-          <a href="#" class="common-button">자세히 보기</a>
-        </div>
-      </div>
-    `;
-    });
-    wrapper.insertAdjacentHTML('beforeend', dataElement);
+    const htmlString = data.map(template).join('');
+    wrapper.insertAdjacentHTML('beforeend', htmlString);
   } catch (error) {
     //요청 시 에러 사항
     console.log(`Error: ${error}`);
   }
 }
-getProducts(4, silderWrapper);
+getProducts(4, silderWrapper, createSliderTeplate);
+getProducts(3, offersWrapper, createOfferTeplate);

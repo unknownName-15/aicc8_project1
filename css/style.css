@@ -167,7 +167,7 @@
   transform: translateY(-50%);
 }
 
-.silder-section .silder-text {
+.silder-section .slider-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -255,9 +255,20 @@
   padding: var(--el-medium);
 }
 
+.offers-section .product-img {
+  width: var(--ls-full);
+  height: 220px;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  position: relative;
+}
+
 .offers-section .product-frame img {
   width: var(--ls-full);
-  border-radius: 0.25rem;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
 }
 
 .offers-section .product-text {
@@ -281,4 +292,130 @@
 .offers-section .product-text p {
   padding: var(--el-medium);
   font-size: var(--fs-small-text);
+}
+
+/* Review Section Styles */
+.review-section {
+  background: url(../images/review-background.jpeg) no-repeat center center /
+    cover;
+}
+
+.review-section .reviews {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.review-section .review-frame {
+  width: var(--ls-1-3);
+  padding: var(--el-medium);
+}
+
+.review-section .review-item {
+  background: #fff;
+  padding: var(--el-wide);
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.review-section .review-item p {
+  font-size: var(--fs-small-text);
+  margin-bottom: var(--el-medium);
+  /* 본문 네 줄까지만 표시 후 축약 */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.review-section .review-writer {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--el-small);
+  align-items: center;
+}
+
+.review-section .review-writer img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.review-section .review-writer h4 {
+  font-size: var(--fs-name);
+  font-weight: var(--fw-400);
+}
+
+.review-section .review-writer em {
+  font-style: normal;
+  font-size: (--fs-small-text);
+}
+
+/* Insta Section Styles */
+.insta-section .insta-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.insta-section .insta-image {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.25rem;
+}
+
+.insta-section .insta-image > div {
+  width: calc(var(--ls-1-2) - 0.25rem);
+}
+
+.insta-section .insta-image img {
+  width: var(--ls-full);
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+.insta-section .insta-left-image .insta-grid-1 {
+  align-items: center;
+  display: flex;
+}
+
+.insta-section .insta-right-image .insta-grid-1 {
+  display: flex;
+  align-items: flex-end;
+}
+
+.insta-section .insta-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  row-gap: var(--el-normal);
+}
+
+.insta-section .insta-info h4 {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-400);
+}
+
+.insta-section .insta-info .insta-id {
+  font-size: var(--fs-small-text);
+  display: flex;
+  align-items: center;
+  column-gap: var(--el-small);
+}
+
+.insta-section .insta-info .insta-id i {
+  font-size: var(--fs-20);
+}
+
+/* Footer Section Styles */
+footer {
+  padding: 3rem 0;
+  width: var(--ls-full);
+  height: auto;
+}
+
+footer .footer-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

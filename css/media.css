@@ -98,6 +98,27 @@
       width: 40%;
     }
   }
+
+  /* Review Section Styles */
+  .review-section .review-frame {
+    padding: var(--el-normal);
+  }
+
+  .review-section .review-item {
+    padding: var(--el-medium);
+  }
+
+  .review-section .review-item p {
+    -webkit-line-clamp: 3;
+  }
+
+  .insta-section .insta-wrapper {
+    column-gap: var(--el-small);
+  }
+
+  .insta-section .insta-info h4 {
+    font-size: var(--fs-name);
+  }
 }
 
 @media screen and (max-width: 786px) {
@@ -158,6 +179,15 @@
   .offers-section .product-frame {
     width: var(--ls-1-2);
   }
+
+  /* Review Section Styles */
+  .review-section .review-frame {
+    width: var(--ls-1-2);
+  }
+
+  .insta-section .insta-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 501px) {
@@ -214,5 +244,31 @@
   /* Offers Section Styles */
   .offers-section .product-frame {
     width: var(--ls-full);
+  }
+
+  /* Review Section Styles */
+  .review-section .review-frame {
+    width: var(--ls-full);
+  }
+
+  .review-section .insta-grid-2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+
+  /* Insta Section Styles */
+  .insta-section .insta-wrapper {
+    grid-template-columns: 1fr;
+    row-gap: var(--el-medium);
+  }
+
+  .insta-section .insta-info {
+    /* flex, grid에서 사용할 수 있는 요소의 순서를 정함 */
+    order: 1;
+  }
+
+  .insta-section .insta-left-image {
+    order: 2;
   }
 }

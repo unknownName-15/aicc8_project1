@@ -271,4 +271,35 @@
   .insta-section .insta-left-image {
     order: 2;
   }
+
+  /* Footer Section Styles */
+  footer .footer-upper {
+    flex-direction: column;
+  }
+
+  footer .footer-logo {
+    margin-bottom: var(--el-medium);
+  }
+
+  footer .footer-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: var(--el-normal);
+  }
+
+  footer .footer-sns {
+    column-gap: 0.5rem;
+  }
+
+  footer .footer-sns li a {
+    padding: 0;
+  }
+
+  footer .footer-lower {
+    flex-direction: column;
+    row-gap: var(--el-normal);
+    align-items: center;
+    text-align: center;
+  }
 }
